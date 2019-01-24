@@ -14,22 +14,22 @@ protocol ColorPickerViewDelegate {
 
 class ColorPickerViewController: UIViewController {
     
+    var completionHandler: ((UIColor) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    var delegate: ColorPickerViewDelegate?
-    
     @IBAction func onPickColorGreen(sender: Any) {
-        delegate?.userDidChooseColor(color: ColorAsset.green.color)
+        completionHandler?(ColorAsset.green.color)
     }
     
     @IBAction func onPickColorOrange(sender: Any) {
-        delegate?.userDidChooseColor(color: ColorAsset.orange.color)
+        completionHandler?(ColorAsset.orange.color)
     }
     
     @IBAction func onPickColorPurple(sender: Any) {
-        delegate?.userDidChooseColor(color: ColorAsset.purple.color)
+        completionHandler?(ColorAsset.purple.color)
     }
 }

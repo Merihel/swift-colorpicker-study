@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ColorPickerViewDelegate {
+class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +39,9 @@ class ViewController: UIViewController, ColorPickerViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "pickColor" {
             if let destinationVC = segue.destination as? ColorPickerViewController {
-                destinationVC.delegate = self
+                destinationVC.completionHandler = { color in
+                    self.userDidChooseColor(color: color)
+                }
             }
         }
     }
