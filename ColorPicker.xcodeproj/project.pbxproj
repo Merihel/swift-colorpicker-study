@@ -12,6 +12,10 @@
 		081FB68521F9A39D00AAE58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081FB68321F9A39D00AAE58D /* Main.storyboard */; };
 		081FB68721F9A39F00AAE58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081FB68621F9A39F00AAE58D /* Assets.xcassets */; };
 		081FB68A21F9A39F00AAE58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081FB68821F9A39F00AAE58D /* LaunchScreen.storyboard */; };
+		081FB69321F9A57700AAE58D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081FB69221F9A57700AAE58D /* Colors.xcassets */; };
+		081FB69521F9A8DB00AAE58D /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081FB69421F9A8DB00AAE58D /* ColorPickerViewController.swift */; };
+		081FB69721F9B07D00AAE58D /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081FB69621F9B07D00AAE58D /* SegueHandlerType.swift */; };
+		08BBBB4B21F9CEA600CE906B /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BBBB4A21F9CEA600CE906B /* ColorAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		081FB68621F9A39F00AAE58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		081FB68921F9A39F00AAE58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		081FB68B21F9A39F00AAE58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081FB69221F9A57700AAE58D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		081FB69421F9A8DB00AAE58D /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		081FB69621F9B07D00AAE58D /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		08BBBB4A21F9CEA600CE906B /* ColorAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		081FB67E21F9A39D00AAE58D /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				08BBBB4921F9B2E100CE906B /* ColorGroup */,
 				081FB67F21F9A39D00AAE58D /* AppDelegate.swift */,
 				081FB68121F9A39D00AAE58D /* ViewController.swift */,
 				081FB68321F9A39D00AAE58D /* Main.storyboard */,
-				081FB68621F9A39F00AAE58D /* Assets.xcassets */,
+				081FB69421F9A8DB00AAE58D /* ColorPickerViewController.swift */,
 				081FB68821F9A39F00AAE58D /* LaunchScreen.storyboard */,
 				081FB68B21F9A39F00AAE58D /* Info.plist */,
+				081FB69621F9B07D00AAE58D /* SegueHandlerType.swift */,
 			);
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		08BBBB4921F9B2E100CE906B /* ColorGroup */ = {
+			isa = PBXGroup;
+			children = (
+				081FB68621F9A39F00AAE58D /* Assets.xcassets */,
+				081FB69221F9A57700AAE58D /* Colors.xcassets */,
+				08BBBB4A21F9CEA600CE906B /* ColorAsset.swift */,
+			);
+			path = ColorGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				081FB68A21F9A39F00AAE58D /* LaunchScreen.storyboard in Resources */,
+				081FB69321F9A57700AAE58D /* Colors.xcassets in Resources */,
 				081FB68721F9A39F00AAE58D /* Assets.xcassets in Resources */,
 				081FB68521F9A39D00AAE58D /* Main.storyboard in Resources */,
 			);
@@ -137,6 +158,9 @@
 			files = (
 				081FB68221F9A39D00AAE58D /* ViewController.swift in Sources */,
 				081FB68021F9A39D00AAE58D /* AppDelegate.swift in Sources */,
+				081FB69721F9B07D00AAE58D /* SegueHandlerType.swift in Sources */,
+				08BBBB4B21F9CEA600CE906B /* ColorAsset.swift in Sources */,
+				081FB69521F9A8DB00AAE58D /* ColorPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

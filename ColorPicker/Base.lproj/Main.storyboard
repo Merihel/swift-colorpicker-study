@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Color Picker View Controller-->
+        <scene sceneID="efx-O7-ldC">
+            <objects>
+                <viewController id="fzr-iI-TU2" customClass="ColorPickerViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbx-K7-hUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bq9-cM-bKr">
+                                <rect key="frame" x="12" y="102.5" width="351" height="462"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWD-HP-SuI">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="92.5"/>
+                                        <state key="normal" title="Green" backgroundImage="greenIcon"/>
+                                        <connections>
+                                            <action selector="onPickColorGreenWithSender:" destination="fzr-iI-TU2" eventType="touchUpInside" id="hv3-8Q-oqy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehQ-LZ-K5g">
+                                        <rect key="frame" x="0.0" y="185" width="351" height="92"/>
+                                        <state key="normal" title="Orange" backgroundImage="orangeIcon"/>
+                                        <connections>
+                                            <action selector="onPickColorOrangeWithSender:" destination="fzr-iI-TU2" eventType="touchUpInside" id="Zji-K0-qzf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK5-tK-gsB">
+                                        <rect key="frame" x="0.0" y="369.5" width="351" height="92.5"/>
+                                        <state key="normal" title="Purple" backgroundImage="purpleIcon"/>
+                                        <connections>
+                                            <action selector="onPickColorPurpleWithSender:" destination="fzr-iI-TU2" eventType="touchUpInside" id="Gn8-Gh-uXS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iWD-HP-SuI" firstAttribute="height" secondItem="BK5-tK-gsB" secondAttribute="height" id="Hva-Oo-oSr"/>
+                                    <constraint firstItem="iWD-HP-SuI" firstAttribute="height" secondItem="bq9-cM-bKr" secondAttribute="height" multiplier="1:5" id="IXf-iL-6mg"/>
+                                    <constraint firstItem="iWD-HP-SuI" firstAttribute="height" secondItem="ehQ-LZ-K5g" secondAttribute="height" id="NPJ-Gm-kM3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bq9-cM-bKr" firstAttribute="centerY" secondItem="vbx-K7-hUf" secondAttribute="centerY" id="Koe-gX-eI9"/>
+                            <constraint firstItem="PaW-OD-5GL" firstAttribute="trailing" secondItem="bq9-cM-bKr" secondAttribute="trailing" constant="12" id="YKa-ts-cMX"/>
+                            <constraint firstItem="bq9-cM-bKr" firstAttribute="centerX" secondItem="vbx-K7-hUf" secondAttribute="centerX" id="YZl-SJ-zrm"/>
+                            <constraint firstItem="bq9-cM-bKr" firstAttribute="height" secondItem="PaW-OD-5GL" secondAttribute="height" multiplier="5:7" id="fLI-tc-Dtd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PaW-OD-5GL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcU-O7-JB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="903.59820089955031"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-dn-Zje">
+                                <rect key="frame" x="145" y="318.5" width="85" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pick a color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fzr-iI-TU2" kind="show" identifier="pickColor" id="JPx-zb-hZd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="green"/>
+                        <constraints>
+                            <constraint firstItem="PvU-dn-Zje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6iM-hN-h7K"/>
+                            <constraint firstItem="PvU-dn-Zje" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oQt-Fy-IvO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-44" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="greenIcon" width="25" height="25"/>
+        <image name="orangeIcon" width="25" height="25"/>
+        <image name="purpleIcon" width="25" height="25"/>
+        <namedColor name="green">
+            <color red="0.45882352941176469" green="0.74901960784313726" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
